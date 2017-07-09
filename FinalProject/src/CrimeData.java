@@ -16,21 +16,6 @@ public class CrimeData {
 	}
 
 	/**
-	 * @param i
-	 * @return records.get(index i)
-	 */
-	public CrimeRecord getRecordNumber(int i){
-		return records.get(i);
-	}
-	
-	/**
-	 * Gets the number of records in the list.
-	 * @return int records.size
-	 */
-	public int getNumberOfRecords(){
-		return records.size();
-	}
-	/**
 	 * Reads the file in filePath. Creates CrimeRecord object to add them to record
 	 * @param filePath
 	 */
@@ -131,5 +116,20 @@ public class CrimeData {
 			}
 		}
 		return least.getYear();
+	}
+/**
+	 * @param i is the record index number
+	 * @return records.get(index i)
+	 */
+	public CrimeRecord getRecordNumber(int i){
+		return records.get(i);
+	}
+	
+	/**
+	 * Gets the number of records in the list.
+	 * @return int records.size
+	 */
+	public int getNumberOfRecords(){
+		return records.size();
 	}
 }
