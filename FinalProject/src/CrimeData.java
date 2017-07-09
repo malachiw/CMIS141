@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 //Creates Crime Records objects and works with data
 /**
- * @author malachi
+ * @author malachi woodlee
  *
  */
 public class CrimeData {
@@ -58,10 +58,6 @@ public class CrimeData {
 		}
 	}
 	
-	public String getConsecYearChange(){
-		
-		return null;
-	}
 	/**
 	 * 
 	 * @return The year that had the most murders
@@ -131,5 +127,16 @@ public class CrimeData {
 	 */
 	public int getNumberOfRecords(){
 		return records.size();
+	}
+	
+	public double [] calcDeltaAnnually{
+		double [] deltaAsPercent =[0];
+		CrimeRecord delta = record.get(0);
+		for(CrimeRecord record:records){
+			for (int i=0,i<getNumberOfRecords(),i++){
+				delta.getMurderAndManslaughter
+			}
+		}
+		return deltaAsPercent;
 	}
 }
