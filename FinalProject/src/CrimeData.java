@@ -138,6 +138,6 @@ public class CrimeData {
 	}
 
 	public double[] listPopulationChange(double i, double j){
-		
+		return null;
 	}
 }
