@@ -8,11 +8,18 @@ public class CrimeData {
 	public CrimeData(){
 		records = new ArrayList<CrimeRecord>();
 	}
+
 	
+	public String findYearHighMurder(){
+		return null;
+	}
+	
+	//test method
 	public CrimeRecord getRecordNumber(int i){
 		return records.get(i);
 	}
 	
+	//test method
 	public int getNumberOfRecords(){
 		return records.size();
 	}
