@@ -129,14 +129,15 @@ public class CrimeData {
 		return records.size();
 	}
 	
-	public double [] calcDeltaAnnually{
-		double [] deltaAsPercent =[0];
-		CrimeRecord delta = record.get(0);
-		for(CrimeRecord record:records){
-			for (int i=0,i<getNumberOfRecords(),i++){
-				delta.getMurderAndManslaughter
-			}
+	public double[] listOfPopulationAnnual() {
+		double[] population=[getNumberOfRecords()];		
+		for(record:records){
+				population.concat(record.getPopulation());
 		}
-		return deltaAsPercent;
+		return population;
+	}
+
+	public double[] listPopulationChange(double i, double j){
+		
 	}
 }
