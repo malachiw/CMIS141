@@ -11,8 +11,13 @@ public class Main {
 		//System.out.println(Strings.greeting());
 		//Scanner input = new Scanner(System.in);
 		//input.nextInt();
-		System.out.println("Most was year " + CrimeData.getMostMurders()+". The least was "
-				+ CrimeData.getLeastMurders() +" ");
+		
+		/**
+		 * Test statement for CrimeData methods
+		 */
+		System.out.println("The year with the most murders was " + CrimeData.getMostMurders()+". The year with the least was "
+				+ CrimeData.getLeastMurders() + "The year with the most robberies was " + CrimeData.getMostRobberies() 
+				+". The year with the least was " + CrimeData.getLeastRobberies() +" ");
 		
 		//Insert loop logic here for menu selection
 		//input.close();
