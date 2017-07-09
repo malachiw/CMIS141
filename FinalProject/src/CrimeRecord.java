@@ -76,7 +76,7 @@ public class CrimeRecord {
 	}
 
 	/**
-	 * @return the murderAndManslaughter
+	 * @return double the murderAndManslaughter
 	 */
 	public double getMurderAndManslaughter() {
 		return murderAndManslaughter;

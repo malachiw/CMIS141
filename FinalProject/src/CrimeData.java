@@ -3,7 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 //Creates Crime Records objects and works with data
 public class CrimeData {
-	private ArrayList<CrimeRecord> records;
+	
+	private static ArrayList<CrimeRecord> records;
 	
 	public CrimeData(){
 		records = new ArrayList<CrimeRecord>();
@@ -20,9 +21,9 @@ public class CrimeData {
 	 * Reads the file in filePath. Creates CrimeRecord object to add them to record
 	 * @param filePath
 	 */
-	public void loadDataFromFile(String filePath){
+	public void loadDataFromFile(String FILEPATH){
 		try {
-			Scanner input = new Scanner(new FileReader(filePath));
+			Scanner input = new Scanner(new FileReader(FILEPATH));
 			String line;
 			CrimeRecord record;
 			input.nextLine();
@@ -57,5 +58,30 @@ public class CrimeData {
 		} catch (Exception e){
 			System.out.println("Error" + e.getMessage());
 		}
+	}
+	
+	public String getConsecYearChange(){
+		
+		return null;
+	}
+	
+	public static String getMostMurders(){
+		CrimeRecord most = records.get(0);
+		for (CrimeRecord record:records){
+			if(most.getMurderAndManslaughter() < record.getMurderAndManslaughter()){
+				most = record;
+			}
+		}
+		return most.getYear();
+	}
+	
+	public static String getLeastMurders(){
+		CrimeRecord most = records.get(0);
+		for (CrimeRecord record:records){
+			if(most.getMurderAndManslaughter() > record.getMurderAndManslaughter()){
+				most = record;
+			}
+		}
+		return most.getYear();
 	}
 }
