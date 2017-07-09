@@ -3,6 +3,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 //Creates Crime Records objects and works with data
+/**
+ * @author malachi
+ *
+ */
 public class CrimeData {
 	
 	private static ArrayList<CrimeRecord> records;
@@ -11,17 +15,18 @@ public class CrimeData {
 		records = new ArrayList<CrimeRecord>();
 	}
 
-	
-	public String findYearHighMurder(){
-		return null;
-	}
-	
-	//test method
+	/**
+	 * @param i
+	 * @return records.get(index i)
+	 */
 	public CrimeRecord getRecordNumber(int i){
 		return records.get(i);
 	}
 	
-	//test method
+	/**
+	 * Gets the number of records in the list.
+	 * @return int records.size
+	 */
 	public int getNumberOfRecords(){
 		return records.size();
 	}
@@ -72,7 +77,10 @@ public class CrimeData {
 		
 		return null;
 	}
-	
+	/**
+	 * 
+	 * @return The year that had the most murders
+	 */
 	public static String getMostMurders(){
 		CrimeRecord most = records.get(0);
 		for (CrimeRecord record:records){
@@ -83,13 +91,45 @@ public class CrimeData {
 		return most.getYear();
 	}
 	
+	/**
+	 * 
+	 * @return The year that had the least murders
+	 */
 	public static String getLeastMurders(){
+		CrimeRecord least = records.get(0);
+		for (CrimeRecord record:records){
+			if(least.getMurderAndManslaughter() > record.getMurderAndManslaughter()){
+				least = record;
+			}
+		}
+		return least.getYear();
+	}
+	
+	/**
+	 * 
+	 * @return The year that had the most robberies.
+	 */
+	public static String getMostRobberies(){
 		CrimeRecord most = records.get(0);
 		for (CrimeRecord record:records){
-			if(most.getMurderAndManslaughter() > record.getMurderAndManslaughter()){
+			if(most.getRobbery() < record.getRobbery()){
 				most = record;
 			}
 		}
 		return most.getYear();
+	}
+	
+	/**
+	 * 
+	 * @return The year that had the least robberies.
+	 */
+	public static String getLeastRobberies(){
+		CrimeRecord least = records.get(0);
+		for (CrimeRecord record:records){
+			if(least.getRobbery() > record.getRobbery()){
+				least = record;
+			}
+		}
+		return least.getYear();
 	}
 }
