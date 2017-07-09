@@ -6,6 +6,7 @@ public class Main {
 		CrimeData crimeData = new CrimeData();
 		crimeData.loadDataFromFile("C:\\data\\Crime.csv");
 		System.out.println(greeting());
+		System.out.println(crimeData.getNumberOfRecords);
 		Scanner input = new Scanner(System.in);
 		input.nextInt();
 		//Insert loop logic here for menu selection
