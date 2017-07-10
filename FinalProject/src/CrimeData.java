@@ -1,5 +1,4 @@
 
-import java.awt.List;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -126,21 +125,14 @@ public class CrimeData {
 	 * Gets the number of records in the list.
 	 * @return int records.size
 	 */
-	public static int getNumberOfRecords(){
+	public int getNumberOfRecords(){
 		return records.size();
 	}
 	
-<<<<<<< HEAD
 	public static double[] listOfPopulationAnnual() {
-		ArrayList population = new ArrayList<double>();
-		for(CrimeRecord record:records){
-			population.add(record.getPopulation());
-=======
-	public double[] listOfPopulationAnnual() {
 		double[] population=[getNumberOfRecords()];		
 		for(record:records){
-				population.concat(record.getPopulation());
->>>>>>> branch 'master' of https://github.com/malachiw/CMIS141
+				population.add(record.getPopulation());
 		}
 		return population;
 	}
