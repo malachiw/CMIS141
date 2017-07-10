@@ -129,10 +129,10 @@ public class CrimeData {
 		return records.size();
 	}
 	
-	public double[] listOfPopulationAnnual() {
-		double[] population=[getNumberOfRecords()];		
+	public ArrayList<> listOfPopulationAnnual() {
+		ArrayList<> population=new ArrayList<double>(getNumberOfRecords());		
 		for(record:records){
-				population.concat(record.getPopulation());
+				population.add(record.getPopulation());
 		}
 		return population;
 	}
