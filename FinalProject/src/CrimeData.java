@@ -1,4 +1,5 @@
 
+import java.awt.List;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -125,18 +126,19 @@ public class CrimeData {
 	 * Gets the number of records in the list.
 	 * @return int records.size
 	 */
-	public int getNumberOfRecords(){
+	public static int getNumberOfRecords(){
 		return records.size();
 	}
 	
-	public double [] calcDeltaAnnually{
-		double [] deltaAsPercent =[0];
-		CrimeRecord delta = record.get(0);
+	public static double[] listOfPopulationAnnual() {
+		ArrayList population = new ArrayList<double>();
 		for(CrimeRecord record:records){
-			for (int i=0,i<getNumberOfRecords(),i++){
-				delta.getMurderAndManslaughter
-			}
+			population.add(record.getPopulation());
 		}
-		return deltaAsPercent;
+		return population;
+	}
+
+	public double[] listPopulationChange(double i, double j){
+		return null;
 	}
 }
