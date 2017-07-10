@@ -1,6 +1,7 @@
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 //Creates Crime Records objects and works with data
 /**
@@ -129,9 +130,9 @@ public class CrimeData {
 		return records.size();
 	}
 	
-	public ArrayList<> listOfPopulationAnnual() {
-		ArrayList<> population=new ArrayList<double>(getNumberOfRecords());		
-		for(record:records){
+	public static List<Object> listOfPopulationAnnual() {
+		List<Object> population=new ArrayList<>();		
+		for(CrimeRecord record:records){
 				population.add(record.getPopulation());
 		}
 		return population;
