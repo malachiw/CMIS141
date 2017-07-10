@@ -130,10 +130,17 @@ public class CrimeData {
 		return records.size();
 	}
 	
+<<<<<<< HEAD
 	public static double[] listOfPopulationAnnual() {
 		ArrayList population = new ArrayList<double>();
 		for(CrimeRecord record:records){
 			population.add(record.getPopulation());
+=======
+	public double[] listOfPopulationAnnual() {
+		double[] population=[getNumberOfRecords()];		
+		for(record:records){
+				population.concat(record.getPopulation());
+>>>>>>> branch 'master' of https://github.com/malachiw/CMIS141
 		}
 		return population;
 	}

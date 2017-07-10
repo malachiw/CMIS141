@@ -18,11 +18,15 @@ public class Main {
 		System.out.println("The year with the most murders was " + CrimeData.getMostMurders()+". The year with the least was "
 				+ CrimeData.getLeastMurders() + "The year with the most robberies was " + CrimeData.getMostRobberies() 
 				+". The year with the least was " + CrimeData.getLeastRobberies() +" ");
+<<<<<<< HEAD
 		double[] stats=CrimeData.listOfPopulationAnnual();
 		for(int i=0; i<20; i++){
 				System.out.println(stats[i]);
 		}
 		;
+=======
+		System.out.println(CrimeData.listOfPopulationAnnual());
+>>>>>>> branch 'master' of https://github.com/malachiw/CMIS141
 		//Insert loop logic here for menu selection
 		//input.close();
 	}
