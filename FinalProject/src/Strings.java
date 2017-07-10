@@ -9,7 +9,7 @@ public class Strings {
 				"4. What year was the Robbery rate the highest?\n" +
 				"5. What year was the Robbery rate the lowest?\n" +
 				"6. Total number of records" +
-				"7. " +
+				"7. "
 				"Q. Quit the program\n\n" +
 				"Enter your selection: ";
 	}
