@@ -19,6 +19,7 @@ public class Main {
 				+ CrimeData.getLeastMurders() + "The year with the most robberies was " + CrimeData.getMostRobberies() 
 				+". The year with the least was " + CrimeData.getLeastRobberies() +" ");
 		System.out.println(CrimeData.listOfPopulationAnnual());
+		System.out.println(CrimeData.sumPopulationChange(CrimeData.listOfPopulationAnnual()));
 		//Insert loop logic here for menu selection
 		//input.close();
 	}

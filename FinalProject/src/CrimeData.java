@@ -114,7 +114,7 @@ public class CrimeData {
 		}
 		return least.getYear();
 	}
-/**
+	/**
 	 * @param i is the record index number
 	 * @return records.get(index i)
 	 */
@@ -130,15 +130,19 @@ public class CrimeData {
 		return records.size();
 	}
 	
-	public static List<Object> listOfPopulationAnnual() {
-		List<Object> population=new ArrayList<>();		
+	public static ArrayList<Object> listOfPopulationAnnual() {
+		ArrayList<Object> population=new ArrayList<>();		
 		for(CrimeRecord record:records){
 				population.add(record.getPopulation());
 		}
 		return population;
 	}
 
-	public double[] listPopulationChange(double i, double j){
-		return null;
+	public static ArrayList<Object> sumPopulationChange(ArrayList<Object> population){
+		ArrayList<Object> delta=new ArrayList<>();
+		for(int i=0; i<population.size(); i++){
+			delta.add(i, ((double)population.get(i)+ (double) population.get(i))/(double)population.get(i));
+		}
+		return delta;
 	}
 }
