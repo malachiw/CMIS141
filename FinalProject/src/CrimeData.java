@@ -133,15 +133,15 @@ public class CrimeData {
 	public static ArrayList<Object> listOfPopulationAnnual() {
 		ArrayList<Object> population=new ArrayList<>();		
 		for(CrimeRecord record:records){
-				population.add(record.getPopulation());
+				population.add((double)record.getPopulation());
 		}
 		return population;
 	}
 
 	public static ArrayList<Object> sumPopulationChange(ArrayList<Object> population){
 		ArrayList<Object> delta=new ArrayList<>();
-		for(int i=0; i<population.size(); i++){
-			delta.add(i, ((double)population.get(i)+ (double) population.get(i))/(double)population.get(i));
+		for(int i=0; i<population.size()-1; i++){
+			delta.add(i, ((double)population.get(i+1)-(double) population.get(i))/(double)population.get(i)*100);
 		}
 		return delta;
 	}

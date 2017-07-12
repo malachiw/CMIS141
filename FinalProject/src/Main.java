@@ -8,21 +8,25 @@ public class Main {
 		CrimeData crimeData = new CrimeData();
 		crimeData.loadDataFromFile(FILEPATH);
 		
-		//System.out.println(Strings.greeting());
-		//Scanner input = new Scanner(System.in);
-		//input.nextInt();
+		System.out.println(Strings.greeting());
+		Scanner input = new Scanner(System.in);
+		int pickle=input.nextInt();
 		
-		/**
-		 * Test statement for CrimeData methods
-		 */
-		System.out.println("The year with the most murders was " + CrimeData.getMostMurders()+". The year with the least was "
-				+ CrimeData.getLeastMurders() + "The year with the most robberies was " + CrimeData.getMostRobberies() 
-				+". The year with the least was " + CrimeData.getLeastRobberies() +" ");
-		System.out.println(CrimeData.listOfPopulationAnnual());
-		System.out.println(CrimeData.sumPopulationChange(CrimeData.listOfPopulationAnnual()));
-		//Insert loop logic here for menu selection
-		//input.close();
+		while(true){
+			switch((int)pickle){
+			case 1: //System.out.print(Strings.changeInPopulation);
+			case 2: System.out.println(Strings.mostMurdersToString());
+			case 3: System.out.println(Strings.fewestMurdersToString());
+			case 4: System.out.println(Strings.mostRobberisToString());
+			case 5: System.out.println(Strings.fewestRobberiesToString());
+			case 6: System.out.println(Strings.numOfRecsToString());
+			}
+			if(((String) pickle).equalsIgnoreCase("Q")){
+				System.out.println(Strings.exitString());
+				input.close();
+				System.exit(0);
+			}
+
+		}
 	}
-	
-	
 }
