@@ -10,21 +10,24 @@ public class Main {
 		
 		System.out.println(Strings.greeting());
 		Scanner input = new Scanner(System.in);
-		int pickle=input.nextInt();
+		String request=input.nextLine();
 		
 		while(true){
-			switch((int)pickle){
-			case 1: //System.out.print(Strings.changeInPopulation);
-			case 2: System.out.println(Strings.mostMurdersToString());
-			case 3: System.out.println(Strings.fewestMurdersToString());
-			case 4: System.out.println(Strings.mostRobberisToString());
-			case 5: System.out.println(Strings.fewestRobberiesToString());
-			case 6: System.out.println(Strings.numOfRecsToString());
-			}
-			if(((String) pickle).equalsIgnoreCase("Q")){
+			if (request.matches([0-9])){
+				switch((int)pickle){
+					case 1: //System.out.print(Strings.changeInPopulation);
+				case 2: System.out.println(Strings.mostMurdersToString());
+				case 3: System.out.println(Strings.fewestMurdersToString());
+				case 4: System.out.println(Strings.mostRobberisToString());
+				case 5: System.out.println(Strings.fewestRobberiesToString());
+				case 6: System.out.println(Strings.numOfRecsToString());
+				}
+			}else if(request.equalsIgnoreCase("Q")){
 				System.out.println(Strings.exitString());
 				input.close();
 				System.exit(0);
+			}else{
+				System.out.println(Strings.greeting());
 			}
 
 		}
