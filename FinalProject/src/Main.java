@@ -4,32 +4,41 @@ public class Main {
 	//Get started here
 	public static void main(String[] args) {
 		final String FILEPATH = "C:\\Users\\malachi\\git\\CMIS141\\FinalProject\\Crime.csv";
+		long startTime = System.currentTimeMillis();
 		
 		CrimeData crimeData = new CrimeData();
 		crimeData.loadDataFromFile(FILEPATH);
-		
-		System.out.println(Strings.greeting());
-		Scanner input = new Scanner(System.in);
-		String request=input.nextLine();
-		
-		while(true){
-			if (request.matches([0-9])){
-				switch((int)pickle){
+		boolean check = true;
+		while(check){
+			System.out.println(Strings.greeting());
+			Scanner input = new Scanner(System.in);
+			String request=input.nextLine();
+			if (request.matches("[1-6]"+"")){
+				int menuRequest =Integer.parseInt(request);
+				switch(menuRequest){
 					case 1: //System.out.print(Strings.changeInPopulation);
-				case 2: System.out.println(Strings.mostMurdersToString());
-				case 3: System.out.println(Strings.fewestMurdersToString());
-				case 4: System.out.println(Strings.mostRobberisToString());
-				case 5: System.out.println(Strings.fewestRobberiesToString());
-				case 6: System.out.println(Strings.numOfRecsToString());
+					case 2: System.out.println(Strings.mostMurdersToString());
+						continue;
+					case 3: System.out.println(Strings.fewestMurdersToString());
+						continue;
+					case 4: System.out.println(Strings.mostRobberisToString());
+						continue;
+					case 5: System.out.println(Strings.fewestRobberiesToString());
+						continue;
+					case 6: System.out.println(Strings.numOfRecsToString());
+						continue;
 				}
 			}else if(request.equalsIgnoreCase("Q")){
-				System.out.println(Strings.exitString());
-				input.close();
-				System.exit(0);
+				check = false;
 			}else{
-				System.out.println(Strings.greeting());
+				continue;
 			}
-
+		long endTime = System.currentTimeMillis();
+		long elapsedTime = (endTime - startTime)/1000;
+		System.out.println("Total time using database: " + elapsedTime + " seconds\n");
+		System.out.println(Strings.exitString());
+		input.close();
+		System.exit(0);
 		}
 	}
 }

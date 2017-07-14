@@ -14,16 +14,16 @@ public class Strings {
 	}
 	
 	public static String mostMurdersToString(){
-		return "The year with the most murders was " + CrimeData.getMostMurders()+".";
+		return "The year with the most murders was " + CrimeData.getMostMurders()+".\n";
 	}
 	public static String fewestMurdersToString(){
-		return "The year with the fewest murders was "+ CrimeData.getLeastMurders()+".";
+		return "The year with the fewest murders was " + CrimeData.getLeastMurders()+".\n";
 	}
 	public static String mostRobberisToString(){
-		return "The year with the most robberies was " + CrimeData.getMostRobberies()+".";
+		return "The year with the most robberies was " + CrimeData.getMostRobberies()+".\n";
 	}
 	public static String fewestRobberiesToString(){
-		return "The year with the fewest robberies was " + CrimeData.getLeastRobberies() +".";
+		return "The year with the fewest robberies was " + CrimeData.getLeastRobberies() +".\n";
 	}
 	public static String numOfRecsToString(){
 		return null;
