@@ -3,11 +3,15 @@ import java.util.Scanner;
 public class Main {
 	//Get started here
 	public static void main(String[] args) {
-		final String FILEPATH = "C:\\Users\\malachi\\git\\CMIS141\\FinalProject\\Crime.csv";
+		String filePath = null;
+		for(String s:args){
+			filePath=s;
+		}
+		System.out.print(filePath);
 		long startTime = System.currentTimeMillis();
 		
 		CrimeData crimeData = new CrimeData();
-		crimeData.loadDataFromFile(FILEPATH);
+		crimeData.loadDataFromFile(filePath);
 		boolean check = true;
 		while(check){
 			System.out.println(Strings.greeting());
@@ -16,8 +20,9 @@ public class Main {
 			if (request.matches("[1-6]"+"")){
 				int menuRequest =Integer.parseInt(request);
 				switch(menuRequest){
-					case 1: //System.out.print(Strings.changeInPopulation);
-					case 2: System.out.println(Strings.mostMurdersToString());
+					case 1: System.out.print(Strings.changeInPopulation());
+						continue;
+					case 2: System.out.println(Strings.highestMurderRateToString());
 						continue;
 					case 3: System.out.println(Strings.fewestMurdersToString());
 						continue;

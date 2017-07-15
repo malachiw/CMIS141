@@ -1,21 +1,22 @@
 //Creates records
 public class CrimeRecord {
 	private double population,  violentCrime,  violentCrimeRate,
-	 murderAndManslaughter,  rape,  rapeRate,  robbery,  robberyRate,
+	 murderAndManslaughter, murderAndManslaughterRate, rape,  rapeRate,  robbery,  robberyRate,
 	 aggravatedAssualt,  aggravatedAssualtRate,  propertyCrime,  propertyCrimeRate,
 	 burglary,  burglaryRate,  larceny,  larcenyRate,  motorVehicleTheft, motorVehicleTheftRate;
 	
 	private String year;
 	
 	public CrimeRecord(String year, double population, double violentCrime, double violentCrimeRate, double murderAndManslaughter,
-			double rape, double rapeRate, double robbery, double robberyRate, double aggravatedAssualt,
-			double aggravatedAssualtRate, double propertyCrime, double propertyCrimeRate, double burglary,
-			double burglaryRate, double larceny, double larcenyRate, double motorVehicleTheft,
+			double murderAndManslaughterRate, double rape, double rapeRate, double robbery, double robberyRate,
+			double aggravatedAssualt, double aggravatedAssualtRate, double propertyCrime, double propertyCrimeRate, 
+			double burglary, double burglaryRate, double larceny, double larcenyRate, double motorVehicleTheft,
 			double motorVehicleTheftRate) {
 		this.population = population;
 		this.violentCrime = violentCrime;
 		this.violentCrimeRate = violentCrimeRate;
 		this.murderAndManslaughter = murderAndManslaughter;
+		this.murderAndManslaughterRate = murderAndManslaughterRate;
 		this.rape = rape;
 		this.rapeRate = rapeRate;
 		this.robbery = robbery;
@@ -87,6 +88,20 @@ public class CrimeRecord {
 	 */
 	public void setMurderAndManslaughter(double murderAndManslaughter) {
 		this.murderAndManslaughter = murderAndManslaughter;
+	}
+	
+	/**
+	 * @return the murderAndManslaughterRate
+	 */
+	public double getMurderAndManslaughterRate() {
+		return murderAndManslaughterRate;
+	}
+
+	/**
+	 * @param murderAndManslaughterRate the murderAndManslaughterRate to set
+	 */
+	public void setMurderAndManslaughterRate(double murderAndManslaughterRate) {
+		this.murderAndManslaughterRate = murderAndManslaughterRate;
 	}
 
 	/**
